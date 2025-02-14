@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    position: relative;
+    width: 800px;
+    height: 450px;
+    perspective: 100vh;
+    /* background: red; */
+}
+
+.wrapper .flip-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* background: orange; */
+    border: 1px solid;
+    transform-style: preserve-3d;
+    transition: all 2s ease-in-out;
+
+}
+
+.wrapper:hover .flip-card {
+    transform: rotateY(180deg);
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    /* background: green; */
+    backface-visibility: hidden;
+    position: absolute;
+    overflow: hidden;
+}
+
+.back.card {
+    transform: rotateY(180deg);
+}
+
+/* Student card */
+
+/* front side of card */
+.front.card::before {
+    content: 'FATA University';
+    width: 100%;
+    height: 50px;
+    background: olive;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    font-size: 50px;
+    color: blue;
+    text-shadow: 2px 2px 2px white;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 5px;
+}
+
+.front.card::after {
+    content: 'www.fu.edu.pk';
+    width: 100%;
+    height: 50px;
+    background: olive;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    font-size: 25px;
+}
+
+.front h1 {
+    width: 100%;
+    height: 47px;
+    /* background: lime; */
+    text-align: center;
+    font-size: 40px;
+    margin-top: 60px;
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 3px deeppink;
+}
+
+.front .logo {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    border-radius: 50%;
+}
+
+.front .center-logo {
+    width: 270px;
+    height: 270px;
+    position: absolute;
+    top: 100px;
+    left: 270px;
+    border-radius: 50%;
+    opacity: 0.2;
+}
+
+.front .picture {
+    position: absolute;
+    top: 120px;
+    right: 20px;
+    width: 180px;
+    height: 200px;
+    border: 1px solid;
+}
+
+.front table {
+    font-size: 30px;
+    line-height: 2;
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+/* Back side of card */
+.back.card::before {
+    content: 'FATA University';
+    width: 100%;
+    height: 50px;
+    background: olive;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    font-size: 50px;
+    color: blue;
+    text-shadow: 2px 2px 2px white;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 5px;
+}
+
+.back.card::after {
+    content: 'If Pound Please Return to FATA University Dara Adam Khel, FR Kohat PH:091-58855502';
+    width: 100%;
+    height: 50px;
+    background: olive;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+    color: white;
+    text-shadow: 2px 2px 3px blue;
+}
+
+.back .logo {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    border-radius: 50%;
+}
+
+.back .center-logo {
+    width: 270px;
+    height: 270px;
+    position: absolute;
+    top: 100px;
+    left: 270px;
+    border-radius: 50%;
+    opacity: 0.2;
+}
+
+.back table {
+    font-size: 25px;
+    margin-top: 65px;
+    line-height: 2;
+    font-weight: bold;
+    padding-left: 5px;
+}
